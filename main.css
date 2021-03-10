@@ -1,0 +1,83 @@
+.dropping {
+  --bgcolor: #002550;
+  --bghover: #073e7d;
+  --color: white;
+  --fontsize: 25px;
+  --fontsizemenu: 1rem;
+  position: relative;
+  display: inline-block;
+  font-size: var(--fontsize);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.dropping .dropping-opener {
+  cursor: pointer;
+}
+
+.dropping .dropping-menu {
+  position: absolute;
+  left: 50%;
+  right: unset;
+  display: none;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-size: var(--fontsizemenu);
+  margin-top: 13px;
+  z-index: 10;
+}
+
+.dropping .dropping-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropping .dropping-menu ul li {
+  background: var(--bgcolor);
+}
+
+.dropping .dropping-menu ul li > * {
+  display: block;
+  color: var(--color);
+  padding: 10px 20px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.dropping .dropping-menu ul li:hover {
+  background: var(--bghover);
+}
+
+.dropping input.dropping-input {
+  display: none;
+}
+
+.dropping .dropping-input:checked + .dropping-menu {
+  display: block;
+}
+
+.dropping.righten {
+  float: right;
+}
+
+.dropping.righten .dropping-menu {
+  right: 0;
+  left: unset;
+  -webkit-transform: none;
+          transform: none;
+}
+
+.dropping.leften {
+  float: left;
+}
+
+.dropping.leften .dropping-menu {
+  left: 0;
+  right: unset;
+  -webkit-transform: none;
+          transform: none;
+}
+/*# sourceMappingURL=main.css.map */
